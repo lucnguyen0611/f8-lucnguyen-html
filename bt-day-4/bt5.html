@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        /* Selector theo thẻ */
+        h1 {
+            color: red;
+        }
+        /* Selector theo anh chị em */
+        h1 + p {
+            font-size: 18px;
+        }
+        /* Selector theo thẻ */
+        ul {
+            list-style: none;
+        }
+        /* Selector theo thẻ */
+        a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+        /* Selector theo id */
+        #f8 {
+            color: orange;
+        }
+        /* Selector theo class */
+        .you {
+            color: red;
+        }
+        /* Selector theo con */
+        li > .google{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh sách các web hay dùng</h1>
+    <p>Link đến các web</p>
+    <ul>
+        <li>
+            <a id="f8" href="https://fullstack.edu.vn/">F8</a>
+        </li>
+        <li>
+            <a class="you" href="https://www.youtube.com/">Youtube</a>
+        </li>
+        <li>
+            <a class="google" href="https://www.google.com.vn/?hl=vi">Google</a>
+        </li>
+        <li>
+            <a class="face" style="color: blue;" href="https://www.facebook.com/">Facebook</a>
+        </li>
+    </ul>
+</body>
+</html>
