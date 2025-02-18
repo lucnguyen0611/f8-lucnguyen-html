@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            background-color: rgb(41, 41, 51);
+            color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        h1 span{
+            color: orange;
+        }
+        input {
+            padding: 8px;
+        }
+        #email:focus {
+            color: orange;
+            background-color: #ddd;
+        }
+        #submit {
+            background-color: yellow;
+        }
+        #submit:hover {
+            background-color: orange;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1><span>Earn income</span> with your CSS skills</h1>
+        <p>Sign and we'll send you the best freelance opportunities straight to your inbox.</p>
+        <p>We're building the largest self-service freelancing marketplace for people like you.</p>
+        <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+            <input type="email" name="email" id="email" placeholder="Email Address" required  autocomplete="off">
+            <input type="submit" id="submit" value="Send Me Opportunities">
+        </form>
+    </div>
+</body>
+</html>
