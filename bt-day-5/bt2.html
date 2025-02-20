@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: none;
+        }
+        label {
+            display: block;
+            background-color: rgb(255, 85, 0);
+            color: #fff;
+            padding: 12px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        label::before {
+            content: "+";
+        }
+        .item {
+            margin-bottom: 8px;
+        }
+        .content {
+            display: none;
+        }
+        input:checked ~ .content {
+            display: block;
+            margin-left: 24px;
+            font-size: 18px;
+        }    
+        input:checked ~ label::before {
+            content: "-";
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <input type="checkbox" id="check1">
+        <label for="check1" class="title">
+            How to set random colors?
+        </label>
+        <div class="content">
+            <ol>
+                To set random colors:
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quos.</li>
+                <li>You can change color from here.</li>
+            </ol>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Labore temporibus quaerat hic, minima recusandae odit sequi at aspernatur totam amet maiores a fugiat non.
+                Totam, itaque id. Amet voluptates, ullam error voluptatibus sed distinctio maxime officiis, rerum perferendis recusandae fugit.
+            </p>
+        </div>
+    </div>    
+    <div class="item">
+        <input type="checkbox" id="check2">
+        <label for="check2" class="title">
+            How to use theme colors and add new theme color?
+        </label>
+        <div class="content">
+            <ol>
+                To set random colors:
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quos.</li>
+                <li>You can change color from here.</li>
+            </ol>
+        </div>
+    </div>    
+    <div class="item">
+        <input type="checkbox" id="check3">
+        <label for="check3" class="title">
+            How to change icon?
+        </label>
+        <div class="content">
+            <ol>
+                To set random colors:
+                <li>Lorem ipsum dolor sit amet consectetur.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, quos.</li>
+            </ol>
+        </div>
+    </div>    
+</body>
+</html>
