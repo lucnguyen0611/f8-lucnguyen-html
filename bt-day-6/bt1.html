@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        :root {
+            --color-primary: rgb(221, 221, 221)
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        form {
+            width: 500px;
+            padding: 30px 40px 50px;
+            border-radius: 16px;
+            border: 2px solid #000;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            font-family: Lobster;
+            font-weight: 200;
+            margin: 0;
+        }
+        p span {
+            color: red;
+        }
+        .label-wrap {
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+        }
+        input, select, textarea {
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            border: 2px solid var(--color-primary);
+        }
+        textarea {
+            height: 100%;
+            padding-top: 20px;
+        }
+        select {
+            appearance: none;
+        }
+        .label-wrap:hover input,
+        .label-wrap:hover select,
+        .label-wrap:hover textarea{
+            border: 2px solid black;
+        }
+        .label-wrap:hover .icon,
+        input:focus ~ label .icon,
+        section:focus ~ label .icon,
+        textarea:focus ~ label .icon{
+            background-color: #000;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary);
+            position: relative;
+        }
+        .icon.mess {
+            height: 144px;
+        }
+        .icon i {
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        .bind {
+            color: var(--color-primary);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .bind.msg {
+            top: 40px;
+        }
+        .send {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            /* Đổi màu background khi nhấn vào ô checkbox */
+            accent-color: var(--color-primary);
+        }
+        /* Nút nhấn send */
+        .btn {
+            padding: 8px 28px;
+            background-color: var(--color-primary);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: red;
+            color: #000;
+        }
+        /* Ẩn hiện note */
+        input:focus ~ .note {
+            display: block;
+        }
+        .note::before {
+            content: "";
+            border-style: solid;
+            border-width: 10px 10px;
+            /* Màu của 4 ô tam giác để ghép thành hình chữ nhật */
+            border-color:  black transparent transparent transparent;
+            position: absolute;
+            left: 28px;
+            top: 36px;
+        }
+        .note {
+            position: absolute;
+            top: -65px;
+            left: 30px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #000;
+            color: #fff;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+        <h1>Hey there</h1>
+        <p>
+            <span>Wed'd like to hear from you.</span>
+            Send us your message or just say hi with our contact form or directly via phone, we love to chat.
+        </p>
+        <div class="label-wrap">
+            <span class="bind">x</span>
+            <input id="yourname" name="yourname" placeholder="Your name" required>
+            <label for="yourname">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+            </label>
+            <p class="note">Enter your name</p>
+        </div>
+        <div class="label-wrap">
+            <span class="bind">*</span>
+            <input type="text" id="email" name="email" placeholder="your@gmail.com" required>
+            <label for="email">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+            </label>
+            <p class="note">Enter email</p>
+        </div>
+        <div class="label-wrap">
+            <input type="number" id="phone" name="phone" placeholder="+84">
+            <label for="phone">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+            </label>
+            <p class="note">Enter phone</p>
+        </div>
+        <div class="label-wrap">
+            <div class="bind">
+                <i class="fa-solid fa-up-down"></i>
+            </div>
+            <select id="subject" name="subject">
+                <option value="">Subject</option>
+                <option value="math">Math</option>
+                <option value="physics">Physics</option>
+                <option value="history">History</option>
+                <option value="english">English</option>
+            </select>
+            <div class="icon"><i class="fa-solid fa-file"></i></div>
+        </div>
+        <div class="label-wrap">
+            <span class="bind msg">*</span>
+            <textarea name="message" id="message" rows="8" placeholder="Message"></textarea>
+            <label for="message">
+                <div class="icon mess"><i class="fa-solid fa-message"></i></div>
+            </label>
+        </div>
+        <div class="send">
+            <div>
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree">Send me a copy of this message</label>
+            </div>
+            <button type="submit" class="btn">SEND</button>
+        </div>
+    </form>
+</body>
+</html>
