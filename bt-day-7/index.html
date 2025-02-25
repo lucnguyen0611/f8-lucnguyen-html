@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>      
+<!--  
+                                       ┌──► .prod-item                                              
+                                       │                                                            
+    ┌──────────────────────────────────┼───────────────────────────────────────────────────┐        
+    │                                                                                      │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                          img                                    │                  │        
+    │ │                                                                 │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                  .prod-name                                     │                  │        
+    │ │                                                                 │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │┌───────────────────────────┐        ┌──────────────────────────┐│                  │        
+    │ ││  .prod-price-new          │        │  .prod-price--new        ││     .prod-price  │        
+    │ │└───────────────────────────┘        └──────────────────────────┘│      ▲           │        
+    │ └─────────────────────────────────────────────────────────────────┴──────┘           │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                 .description                                    │                  │        
+    │ │                                                                 │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                 .remark                                         │                  │        
+    │ │                                                                 │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │┌───────────────────────────┐         ┌─────────────────────────┐│                  │        
+    │ ││   .rate                   │         │   .like                 ││     .evaluate    │        
+    │ │└───────────────────────────┘         └─────────────────────────┘│       ▲          │        
+    │ └─────────────────────────────────────────────────────────────────┴───────┘          │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                 .sale                                           │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │ ┌─────────────────────────────────────────────────────────────────┐                  │        
+    │ │                                                                 │                  │        
+    │ │                 .installment                                    │                  │        
+    │ └─────────────────────────────────────────────────────────────────┘                  │        
+    │                                                                                      │        
+    └──────────────────────────────────────────────────────────────────────────────────────┘                                 
+                                                                                                                                                                             
+-->                            
+ 
+    <div class="wrap">
+        <div class="prod-list">
+            <div class="prod-item">
+                <img src="./img/ss-s24-ultra-xam-222.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy S24 Ultra 12GB 256GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">25.990.000đ</span>
+                    <span class="prod-price--old">33.990.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.00đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="sale">Giảm 10%</div>
+                    <div class="installment">Trả góp 0%</div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/iphone-15-plus_1__1.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">iPhone 15 128GB | Chính hãng VN/A</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">18.890.000đ</span>
+                    <span class="prod-price--old">22.990.00đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.00đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.00đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/galaxy-a15-xanh-01.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy A15 LTE 8GB 128GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">4.290.000đ</span>
+                    <span class="prod-price--old">4.990.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="sale">Giảm 10%</div>
+                    <div class="installment">Trả góp 0%</div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/iphone-13_2_.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">iPhone 13 128GB | Chính hãng VN/A</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">12.990.000đ</span>
+                    <span class="prod-price--old">17.290.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/dien-thoai-samsung-galaxy-m55.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy M55 12GB 256GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">9.390.000đ</span>
+                    <span class="prod-price--old">11.290.000</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="sale">Giảm 10%</div>
+                <div class="installment">Trả góp 0%</div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/dien-thoai-samsung-galaxy-m55.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy M55 12GB 256GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">9.390.000đ</span>
+                    <span class="prod-price--old">11.290.000</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/iphone-15-plus_1__1.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">iPhone 15 128GB | Chính hãng VN/A</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">18.890.000đ</span>
+                    <span class="prod-price--old">22.990.00đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.00đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.00đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                
+                <div class="sale">Giảm 10%</div>
+                <div class="installment">Trả góp 0%</div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/ss-s24-ultra-xam-222.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy S24 Ultra 12GB 256GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">25.990.000đ</span>
+                    <span class="prod-price--old">33.990.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.00đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/galaxy-a15-xanh-01.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">Samsung Galaxy A15 LTE 8GB 128GB</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">4.290.000đ</span>
+                    <span class="prod-price--old">4.990.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+                <div class="sale">Giảm 10%</div>
+                <div class="installment">Trả góp 0%</div>
+            </div>
+            <div class="prod-item">
+                <img src="./img/iphone-13_2_.webp" alt="Điện thoại">
+                <div class="prod-name">
+                    <h3><a href="">iPhone 13 128GB | Chính hãng VN/A</a></h3>
+                </div>
+                <div class="prod-price">
+                    <span class="prod-price--new">12.990.000đ</span>
+                    <span class="prod-price--old">17.290.000đ</span>
+                </div>
+                <div class="description">
+                    <p>Smember giảm giá thêm đến <span>200.000đ</span></p>
+                    <p>S-Student giảm giá thêm đến <span>500.000đ</span></p>
+                </div>
+                <div class="remark">
+                    <p>Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6 tháng</p>
+                </div>
+                <div class="evaluate">
+                    <div class="rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="like">
+                        <span>Yêu thích</span>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+                                                                    
+</body>
+</html>
