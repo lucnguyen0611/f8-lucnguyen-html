@@ -31,7 +31,6 @@ img {
 }
 .prod-name h3 {
     margin-bottom: 8px;
-    color: #444;
     overflow: hidden;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -103,7 +102,7 @@ img {
     content: "";
     border-width: 8px;
     border-style: solid;
-    border-color: transparent #e33826 transparent transparent;
+    border-color: transparent rgba(227, 56, 38, 0.6) transparent transparent;
     position: absolute;
     top: 18px;
     left: -8px;
