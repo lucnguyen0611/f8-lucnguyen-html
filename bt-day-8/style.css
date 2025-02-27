@@ -111,7 +111,7 @@ nav {
     display: none;
 }
 .nav__mobile {
-    padding-top: 24px;
+    padding-top: 12px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -119,14 +119,25 @@ nav {
     width: 400px;
     background-color: #fff;
     transform: translateX(100%);
+    transition: 0.3s ease;
+}
+.icon__close i{
+    font-size: 20px;
+    padding: 16px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.icon__close:hover i{
+    color: red;
+}
+.nav__mobile--list {
     display: flex;
     flex-direction: column;
-    transition: 0.3s ease;
 }
 .nav__mobile--item label{
     display: block;
     color: var(--primary-color);
-    padding: 8px 24px 8px;
+    padding: 8px 36px 8px;
     font-size: 18px;
     cursor: pointer;
     font-weight: 500;
@@ -139,6 +150,7 @@ nav {
     content: "+";
 }
 .nav__mobile--lv2 {
+    margin-left: 60px;
     display: none;
 }
 .nav__mobile--lv2 li {
@@ -164,9 +176,8 @@ nav {
     #close:checked ~ .nav__mobile {
         transform: translateX(0);
     }
-    .check:checked ~ .nav__mobile--lv2{
+    .check:checked ~ .nav__mobile--lv2 {
         display: block;
-        margin-left: 36px;
         font-size: 16px;
     }
     .check:checked ~ label::before{
