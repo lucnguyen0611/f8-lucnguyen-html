@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", serif;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary-color: #666;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+        nav {
+            max-width: 1500px;
+            margin: 40px auto;
+            border: 1px solid #f6f6f6;
+        }
+        /* Menu 1 */
+        .list-item {
+            position: relative;
+        }
+        .list-item:hover {
+            background-color: #2da5da;
+            color: #fff;
+            cursor: pointer;
+        }
+        .list-item:hover  .list-lv2 {
+            display: flex;
+        }
+        .list-item:hover a{
+            color: #fff;
+        }
+        li {
+            color: var(--primary-color);
+            padding: 15px 20px;
+            border: 1px solid #f6f6f6;
+            font-weight: 500;
+        }
+        li span {
+            margin-left: 8px;
+        }
+        .right {
+            margin-left: auto;
+        }
+        /* Menu 2 */
+        .list-lv2 {
+            flex-direction: column;
+            box-shadow: 0 0 10px 6px rgba(123, 123, 123, 0.4);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            animation: hide ease 0.3s;
+            display: none;
+        }
+        .list-lv2::before {
+            content: "";
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent white transparent;
+            position: absolute;
+            top: -16px;
+            left: 30px;
+        }
+        .list-lv2::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: -16px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+        } 
+        .list-lv2 li {
+            min-width: 240px;
+        }
+        .list-lv2 li:hover {
+            background-color: #f3f3f3;
+        }
+        /* Animation */
+        @keyframes hide{
+            from{
+                transform: scale(0);
+                opacity: 0;
+            }
+            to{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--                                                                          
+                           ul.list                                              
+                               ▲                                                
+                               │                                                
+                               │                                                
+          ┌────────────────────┼────────────────────────────────────┐           
+          │                                                         │       
+          │    ┌──────────────────────────┐                         │           
+          │    │  li.list-item            │                         │           
+          │    └──────────────────────────┘                         │           
+          │    ┌──────────────────────────┐                         │           
+          │    │                          │                         │           
+          │    │                          │                         │           
+          │    │    ┌─────► ul.list-lv2   │                         │           
+          │    │    │                     │                         │           
+          │    │  ┌─┴──────┬───────────┐  │                         │           
+          │    │  │  ┌───────────┐     │  │                         │           
+          │    │  │  │   li      │     │  │                         │           
+          │    │  │  └───────────┘     │  │                         │           
+          │    │  │                    │  ┼─────┐                   │           
+          │    │  │  ┌────────────┐    │  │     │                   │           
+          │    │  │  │   li       │    │  │     │                   │           
+          │    │  │  └────────────┘    │  │     │                   │           
+          │    │  │                    │  │     │                   │           
+          │    │  │  ┌────────────┐    │  │     │                   │           
+          │    │  │  │   li       │    │  │     │                   │           
+          │    │  │  └────────────┘    │  │     │                   │           
+          │    │  └────────────────────┘  │     │                   │           
+          │    └──────────────────────────┘     │                   │           
+          │    ┌──────────────────────────┐     │                   │           
+          │    │                          │     │                   │           
+          │    │                          │     │                   │           
+          │    │    ┌─────► ul.list-lv2   │     │                   │           
+          │    │    │                     │     │                   │           
+          │    │  ┌─┴──────┬───────────┐  │     │                   │           
+          │    │  │  ┌───────────┐     │  │     │                   │           
+          │    │  │  │   li      │     │  │     │                   │           
+          │    │  │  └───────────┘     │  │     │                   │           
+          │    │  │                    │  ┼─────┼───►li.list-item   │           
+          │    │  │  ┌────────────┐    │  │     │                   │           
+          │    │  │  │   li       │    │  │     │                   │           
+          │    │  │  └────────────┘    │  │     │                   │           
+          │    │  │                    │  │     │                   │           
+          │    │  │  ┌────────────┐    │  │     │                   │           
+          │    │  │  │   li       │    │  │     │                   │           
+          │    │  │  └────────────┘    │  │     │                   │           
+          │    │  └────────────────────┘  │     │                   │           
+          │    └──────────────────────────┘     │                   │           
+          │                                     │                   │           
+          │    ┌──────────────────────────┐     │                   │           
+          │    │                          │     │                   │           
+          │    │                          │     │                   │           
+          │    │    ┌─────► ul.list-lv2   │     │                   │           
+          │    │    │                     │     │                   │           
+          │    │  ┌─┴──────┬───────────┐  │     │                   │           
+          │    │  │  ┌───────────┐     │  │     │                   │           
+          │    │  │  │   li      │     │  │     │                   │           
+          │    │  │  └───────────┘     │  │     │                   │           
+          │    │  │                    │  ┼─────┘                   │           
+          │    │  │  ┌────────────┐    │  │                         │           
+          │    │  │  │   li       │    │  │                         │           
+          │    │  │  └────────────┘    │  │                         │           
+          │    │  │                    │  │                         │           
+          │    │  │  ┌────────────┐    │  │                         │           
+          │    │  │  │   li       │    │  │                         │           
+          │    │  │  └────────────┘    │  │                         │           
+          │    │  └────────────────────┘  │                         │           
+          │    └──────────────────────────┘                         │           
+          │    ┌──────────────────────────┐                         │           
+          │    │  li.list-item            │                         │           
+          │    └──────────────────────────┘                         │           
+          │    ┌──────────────────────────┐                         │           
+          │    │  li.list-item            │                         │           
+          │    └──────────────────────────┘                         │           
+          │                                                         │           
+          │                                                         │           
+          └─────────────────────────────────────────────────────────┘           
+                                                                                
+     -->
+    <nav>
+        <ul class="list">
+            <li class="list-item">
+                <a href="#"><i class="fa-solid fa-house-chimney"></i></a>
+            </li>
+            <li class="list-item">
+                <i class="fa-solid fa-star"></i>
+                <span>About us</span>
+                <i class="fa-solid fa-angle-down"></i>
+                <ul class="list-lv2">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Company</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Products</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Specials</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>New</span>
+                <i class="fa-solid fa-angle-down"></i>
+                <ul class="list-lv2">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Company</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Products</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Specials</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Portfolio</span>
+                <i class="fa-solid fa-angle-down"></i>
+                <ul class="list-lv2">
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Company</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Products</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span>Specials</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class="fa-solid fa-blog"></i>
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li class="list-item right">
+                <i class="fa-solid fa-phone"></i>
+                <span>Contacts</span>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

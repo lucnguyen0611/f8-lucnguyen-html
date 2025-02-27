@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--                                                                   
+    ┌────────────────────────────┐                                
+    │   a.logo                   │                                
+    └────────────────────────────┘                                
+                     ┌───► ul.nav__tablet                         
+    ┌────────────────┴───────────┐                                
+    │  ┌─────────────────────┐   │                                
+    │  │  ┌───────────────┐  │   │                                
+    │  │  │ span{About us}│  ├───┼──►  li.nav__tablet--item       
+    │  │  └───────────────┘  │   │                                
+    │  │  ┌──────────────┐   │   │                                
+    │  │  │ ┌────────┐   │   │   │                                
+    │  │  │ │    li  │   │   │   │                                
+    │  │  │ └────────┘   ┼───┼───┼──► ul.nav__tablet--lv2         
+    │  │  │ ┌────────┐   │   │   │                                
+    │  │  │ │    li  │   │   │   │                                
+    │  │  │ └────────┘   │   │   │                                
+    │  │  └──────────────┘   │   │                                
+    │  └─────────────────────┘   │                                
+    │  ┌─────────────────────┐   │                                
+    │  │ li.nav__tablet--item│   │                                
+    │  └─────────────────────┘   │                                
+    │  ┌─────────────────────┐   │                                
+    │  │ li.nav__tablet--item│   │                                
+    │  └─────────────────────┘   │                                
+    └────────────────────────────┘                                
+    ┌────────────────────────────┐                                
+    │   input#close              │                                
+    └────────────────────────────┘                                
+    ┌────────────────────────────┐                                
+    │   label.icon__nav          │                                
+    └────────────────────────────┘                                
+    ┌────────────────────────────┐                                
+    │   label.overlay            │                                
+    └────────────────────────────┘                                
+                     ┌───► ul.nav__mobile                         
+    ┌────────────────┴───────────┐                                
+    │  ┌─────────────────────┐   │                                
+    │  │  ┌────────────────┐ │   │                                
+    │  │  │ input.check    │ │   │                                
+    │  │  └────────────────┘ │   │                 ─              
+    │  │  ┌────────────────┐ ├───┼──►  li.nav__mobile--item       
+    │  │  │ label          │ │   │                                
+    │  │  └────────────────┘ │   │                                
+    │  │  ┌───────────────┬  │   │                                
+    │  │  │ ┌───────────┐ │  │   │                                
+    │  │  │ │    li     │ ├──┼───┼──► ul.nav__mobile--lv2         
+    │  │  │ └───────────┘ │  │   │                                
+    │  │  │ ┌───────────┐ │  │   │                                
+    │  │  │ │    li     │ │  │   │                                
+    │  │  │ └───────────┘ │  │   │                                
+    │  │  └───────────────┘  │   │                                
+    │  │                     │   │                                
+    │  └─────────────────────┘   │                                
+    │  ┌─────────────────────┐   │                                
+    │  │ li.nav__mobile--item│   │                                
+    │  └─────────────────────┘   │                                
+    │  ┌─────────────────────┐   │                                
+    │  │ li.nav__mobile--item│   │                                
+    │  └─────────────────────┘   │                                
+    └────────────────────────────┘                                
+     -->
+    <header>
+        <a href="#" class="logo">
+            <img src="https://rainbowit.net/html/histudy/assets/images/logo/logo.png" alt="logo">
+        </a>
+        <nav>
+            <ul class="nav__tablet">
+                <li class="nav__tablet--item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>About us</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <ul class="nav__tablet--lv2">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Tài khoản của tôi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__tablet--item">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>New</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <ul class="nav__tablet--lv2">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Company</span>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Products</span>
+                           </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Specials</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__tablet--item">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Portfolio</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <ul class="nav__tablet--lv2">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Company</span>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Products</span>
+                           </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Specials</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__tablet--item">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <ul class="nav__tablet--lv2">
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Tài khoản của tôi</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Đăng xuất</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="close">
+        <label for="close" class="icon__navbar">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <label for="close" class="overlay"></label>
+        <ul class="nav__mobile">
+            <li class="nav__mobile--item">
+                <input type="radio" name="test" class="check" id="check1">
+                <label for="check1">
+                    About us
+                </label>
+                <ul class="nav__mobile--lv2">
+                    <li>
+                        <a href="">Tài khoản của tôi</a>
+                    </li>
+                    <li>
+                        <a href="">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__mobile--item">
+                <input type="radio" name="test" class="check" id="check2">
+                <label for="check2">
+                    New
+                </label>
+                <ul class="nav__mobile--lv2">
+                    <li>
+                        <a href="">Company</a>
+                    </li>
+                    <li>
+                        <a href="">Products</a>
+                    </li>
+                    <li>
+                        <a href="">Specials</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__mobile--item">
+                <input type="radio" name="test" class="check" id="check3">
+                <label for="check3">
+                    Portfolio
+                </label>
+                <ul class="nav__mobile--lv2">
+                    <li>
+                        <a href="">Company</a>
+                    </li>
+                    <li>
+                        <a href="">Products</a>
+                    </li>
+                    <li>
+                        <a href="">Specials</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__mobile--item">
+                <input type="radio" name="test" class="check" id="check4">
+                <label for="check4">
+                    Profile
+                </label>
+                <ul class="nav__mobile--lv2">
+                    <li>
+                        <a href="">Tài khoản của tôi</a>
+                    </li>
+                    <li>
+                        <a href="">Đăng xuất</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>
