@@ -13,8 +13,10 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: "Nunito", serif;
             box-sizing: border-box;
+        }
+        html {
+            font-family: "Nunito", serif;
         }
         a {
             text-decoration: none;
@@ -23,11 +25,12 @@
         :root {
             --primary-color: #ff574d;
         }
-        body {
+        .img {
             height: 100vh;
             width: 100%;
             background-image: url(http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg);
             background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -37,6 +40,7 @@
             height: 440px;
             border-radius: 8px;
             display: flex;
+            position: relative;
         }
         .left, .right {
             height: 100%;
@@ -59,6 +63,7 @@
         h1 {
             color: #fff;
             margin-bottom: 18px;
+            font-weight: 800;
         }
         h1 span {
             border-radius: 4px;
@@ -67,7 +72,7 @@
             color: var(--primary-color);
         }
         p {
-            color: #fff;
+            color: #f7bdb0;
             text-align: center;
         }
         .read {
@@ -81,28 +86,42 @@
         .read:hover {
             background-color: rgb(255, 163, 153);
             color: #fff;
+        }.icon {
+            display: flex;
         }
-        .icon a{
-            background-color: #db5c4f;
+        .icon a i{
+            width: 36px;
             color: #fff;
             padding: 10px;
-            margin-left: 8px;
+        }
+        .icon a {
             border-radius: 4px;
+            background-color: #db5c4f;
+            margin-left: 8px;
+
         }
         .icon a:hover {
             background-color: #bd7a73;
         }
         h2 {
+            position: relative;
             color: #272323;
+            margin-bottom: 40px;
+        }
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            border-radius: 4px;
+            position: absolute;
+            background-color: var(--primary-color);
+            left: 50%;
+            top:46px;
+            transform: translateX(-50%);
         }
         h2 span {
             color: var(--primary-color);
-        }
-        .br {
-            height: 2px;
-            width: 48px;
-            margin: 24px 0;
-            background-color: var(--primary-color);
+            font-weight: 800;
         }
         form {
             width: 100%;
@@ -112,10 +131,14 @@
         }
         input {
             padding: 12px 20px;
+            outline: none;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 4px 1px rgb(207, 205, 205);
+            border-radius: 4px;
+            font-family: "Nunito", serif;/
         }
         input:focus {
-            border: 1px solid var(--primary-color);
-            outline: 1px solid var(--primary-color);
+            outline: 2px solid var(--primary-color);
         }
         .login {
             border: none;
@@ -123,6 +146,7 @@
             cursor: pointer;
             border-radius: 4px;
             background-color: var(--primary-color);
+            padding: 15px;
         }
         .login:hover {
             background-color: #bd7a73;
@@ -140,6 +164,25 @@
         }
         .register a:hover, .forgot:hover{
             color: #df8278;
+            text-decoration: underline;
+        }
+        .arrow {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow:  0 0 4px 1px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            left: 325px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .arrow i {
+            color: var(--primary-color);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -203,40 +246,46 @@
         │                                                                                        │      
         └────────────────────────────────────────────────────────────────────────────────────────┘                                                                                                      
     -->
-    <div class="wrap">
-        <div class="left">
-            <h1><span>JL</span> Just Log</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ex dolorem eligendi reiciendis modi, veniam sint!
-            </p>
-            <button class="read">Read more</button>
-            <div class="icon">
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></i></a>
-                <a href=""><i class="fa-brands fa-google"></i></i></a>
-                <a href=""><i class="fa-brands fa-tiktok"></i></i></a>
-            </div>
-        </div>
-        <div class="right">
-            <h2>Login to <span>your account</span></h2>
-            <div class="br"></div>
-            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
-                <input type="password" name="pass" id="pass" placeholder="Password" required>
-                <div class="agree-wrap">
-                    <div>
-                        <input type="checkbox" id="remember" name="remember" value="remember">
-                        <label for="agree">Remember me</label>
-                    </div>
-                    <a href="#" class="forgot">Forgot Password</a>
+    <div class="img">
+        <div class="wrap">
+            <div class="left">
+                <h1><span>JL</span> Just Log</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ex dolorem eligendi reiciendis modi, veniam sint!
+                </p>
+                <button class="read">Read More</button>
+                <div class="icon">
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+                    <a href=""><i class="fa-brands fa-google"></i></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></i></a>
                 </div>
-                <input type="submit" class="login" value="LOGIN">
-                <span class="register">
-                    Don't have an account? 
-                    <a href="#">Register here</a>
-                </span>
-            </form>
+            </div>
+            <div class="right">
+                <h2>Login to <span>your account</span></h2>
+                <!-- <div class="br"></div> -->
+                <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="post">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                    <input type="password" name="pass" id="pass" placeholder="Password" required>
+                    <div class="agree-wrap">
+                        <div>
+                            <input type="checkbox" id="remember" name="remember" value="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot">Forgot Password</a>
+                    </div>
+                    <!-- <input type="submit" class="login" value="LOGIN"> -->
+                    <button type="submit" class="login">LOGIN</button>
+                    <span class="register">
+                        Don't have an account? 
+                        <a href="#">Register here</a>
+                    </span>
+                </form>
+            </div>
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
         </div>
     </div>
 </body>

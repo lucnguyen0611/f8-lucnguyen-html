@@ -120,3 +120,17 @@ img {
     top: 0;
     right: 0;
 }
+.prod-memory {
+    margin: 24px 0 16px;
+}
+.prod-memory a {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2px 4px;
+    margin-right: 4px;
+}
+.prod-memory a span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #726f6f;
+}

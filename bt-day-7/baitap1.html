@@ -43,14 +43,20 @@
         .list-item:hover  .list-lv2 {
             display: flex;
         }
-        .list-item:hover a{
+        .list-item:hover > a{
             color: #fff;
         }
-        li {
+        .list-item {
             color: var(--primary-color);
-            padding: 15px 20px;
             border: 1px solid #f6f6f6;
             font-weight: 500;
+        }
+        .list-lv2 li {
+            border-bottom: 1px solid #f6f6f6;
+        }
+        li a {
+            display: block;
+            padding: 15px 20px;
         }
         li span {
             margin-left: 8px;
@@ -66,7 +72,7 @@
             top: 60px;
             left: 0;
             animation: hide ease 0.3s;
-            display: none;
+            /* display: none; */
         }
         .list-lv2::before {
             content: "";
@@ -86,7 +92,7 @@
             width: 100%;
             height: 20px;
         } 
-        .list-lv2 li {
+        .list-lv2 {
             min-width: 240px;
         }
         .list-lv2 li:hover {
@@ -191,59 +197,83 @@
                 <a href="#"><i class="fa-solid fa-house-chimney"></i></a>
             </li>
             <li class="list-item">
-                <i class="fa-solid fa-star"></i>
-                <span>About us</span>
-                <i class="fa-solid fa-angle-down"></i>
+                <a href="">
+                    <i class="fa-solid fa-star"></i>
+                    <span>About us</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
                 <ul class="list-lv2">
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Company</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Company</span>
+                        </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Products</span>
+                       <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Products</span>
+                       </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Specials</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Specials</span>
+                        </a>
                     </li>
                 </ul>
             </li>
             <li class="list-item">
-                <i class="fa-solid fa-bullhorn"></i>
-                <span>New</span>
-                <i class="fa-solid fa-angle-down"></i>
+                <a href="">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <span>New</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
                 <ul class="list-lv2">
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Company</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Company</span>
+                        </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Products</span>
+                       <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Products</span>
+                       </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Specials</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Specials</span>
+                        </a>
                     </li>
                 </ul>
             </li>
             <li class="list-item">
-                <i class="fa-solid fa-briefcase"></i>
-                <span>Portfolio</span>
-                <i class="fa-solid fa-angle-down"></i>
+                <a href="">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span>Portfolio</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
                 <ul class="list-lv2">
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Company</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Company</span>
+                        </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Products</span>
+                       <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Products</span>
+                       </a>
                     </li>
                     <li>
-                        <i class="fa-solid fa-check"></i>
-                        <span>Specials</span>
+                        <a href="">
+                            <i class="fa-solid fa-check"></i>
+                            <span>Specials</span>
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -254,8 +284,10 @@
                 </a>
             </li>
             <li class="list-item right">
-                <i class="fa-solid fa-phone"></i>
-                <span>Contacts</span>
+                <a href="">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contacts</span>
+                </a>
             </li>
         </ul>
     </nav>
