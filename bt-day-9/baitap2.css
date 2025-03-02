@@ -227,6 +227,10 @@ header {
 .side-bar--item {
     padding: 0 12px;
 }
+.side-bar--item:hover {
+    background-color: var(--back-color-hover);
+    border-radius: 8px;
+}
 .side-bar--item a {
     font-size: 1.4rem;
     padding: 12px 0;
