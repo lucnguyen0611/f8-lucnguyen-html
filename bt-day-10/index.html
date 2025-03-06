@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Bài 1: Tính tiền điện        
+            Bậc Mức  Sử dụng a(kWh)  Giá bán điện   
+            1          0 - 50            1.678        
+            2          51 - 100          1.734        
+            3          101 - 200         2.014       
+            4          201 - 300         2.536        
+            5          301 - 400         3.834        
+            6          Trên 400          3.927  
+        
+    Nếu 0 < a <= 50:
+        TĐ = a*1.678
+
+    Nếu 51 <= a <= 100:
+        TĐ = 50*1.678 + (a - 50)*1.734
+
+    Nếu 101 <= a <= 200:
+        TĐ = 50*1.678 + 50*1.734 + (a -100)*2.014
+
+    Nếu 201 <= a <= 300:
+        TĐ = 50*1.678 + 50*1.734 + 100*2.014 (a -200)*2.536
+        
+    Nếu 301 <= a <= 400:
+        TĐ = 50*1.678 + 50*1.734 + 100*2.014 + 100*2.536 (a -300)*2.834
+
+    Nếu a => 400:
+        TĐ = 50*1.678 + 50*1.734 + 100*2.014 + 100*2.536 + 100*2.834 + (a -400)*2.927
+
+
+        Bài 2: Tính tiền taxi
+            Tính tiền cước taxi dựa vào các điều kiện sau
+            Số km ≤ 1 giá 15000đ
+            1 < số km ≤ 5 giá 13500đ
+            Số km > 5 giá 11000đ
+            Nếu số km > 120 km sẽ được giảm 10% trên tổng số tiền  
+    
+    var x = "Số km"
+    Nếu x <= 1: Tiền taxi = x*15.000
+    Nếu 1 < x <= 5: Tiền taxi = x*13.500
+    Nếu x > 5: Tiền taxi = x*11.000
+    Nếu x > 120: Tiền taxi = x*11.000*0.9
+    -->
+</body>
+</html>
